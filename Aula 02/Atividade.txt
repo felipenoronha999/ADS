@@ -1,0 +1,15 @@
+Criar uma página html com as seguintes características.
+
+- Título da página contendo o nome do discente.
+
+- Fazer uma seção com
+	- tag h1 com seu nome completo
+	- tag h2 com o subtítulo "Biografia"
+	
+	- 2 parágrafos com tag h3 falando quem é você e porque escolheu fazer o curso de ads.
+
+	- adicionar uma foto sua buscada diretamente do seu perfil do whatsapp ou rede social
+
+- salvar no formato html e colocar o arquivo na pasta compartilhada do google drive
+
+https://drive.google.com/drive/folders/1_NZloUQKtcmqkr62rGAb0kAac_VXsVvV?usp=sharing

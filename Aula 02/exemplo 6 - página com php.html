@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Minha Página PHP</title>
+</head>
+<body>
+
+
+    <h1>Bem-vindo ao meu site!</h1>
+
+
+    <p>
+        <?php
+            // Isso é código PHP dentro do HTML
+
+
+            // Define o fuso horário de Cuiabá antes de qualquer outra coisa
+            date_default_timezone_set('America/Cuiaba');
+
+
+           
+            $hora = date("H"); // Pega a hora atual do servidor
+
+
+            if ($hora < 12) {
+                echo "Bom dia! Aproveite o seu café.";
+            } elseif ($hora < 18) {
+                echo "Boa tarde! Como está sendo seu dia?";
+            } else {
+                echo "Boa noite! Hora de descansar.";
+            }
+        ?>
+    </p>
+
+
+    <p><?php echo "Hora atual no Mato Grosso: " . date("H:i:s"); ?></p>
+   
+
+
+</body>
+</html>
