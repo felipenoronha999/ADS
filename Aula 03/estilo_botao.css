@@ -1,0 +1,51 @@
+/* Reset básico (opcional, mas ajuda bastante) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Estilo do botão (funciona tanto para <a> quanto para <button>) */
+.botao {
+  display: inline-block;           /* importante para <a> */
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;           /* tira sublinhado do link */
+  color: white;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito ao passar o mouse */
+.botao:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao clicar */
+.botao:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Versão secundária (opcional) */
+.botaosecundario {
+  background-color: #bd64bd;
+}
+
+.botaosecundario:hover {
+  background-color: #5a6268;
+}
