@@ -1,0 +1,1 @@
+receba uma lista de números e retorne todos os números da lista que são pares em um array.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        form {
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Formulário de Cadastro</h1>
+
+    <form id="formCadastro">
+        <label>Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label>Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" required>
+
+        <label>Total de animais de estimação:</label>
+        <input type="number" id="animais" required>
+
+        <label>Senha:</label>
+        <input type="password" id="senha" required>
+
+        <label>Confirmação de Senha:</label>
+        <input type="password" id="confirmacaoSenha" required>
+
+        <button type="button" onclick="validarCadastro()">Cadastrar</button>
+        <button type="button" onclick="limparFormulario()">Limpar</button>
+    </form>
+
+    <br><br>
+
+    <h2 id="sobre"></h2>
+
+    <img src="https://ufsb.edu.br/residenciapedagogica/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png">
+
+    <!-- Inclui o arquivo JavaScript separado -->
+    <script src="validacao.js"></script>
+
+</body>
+</html>
