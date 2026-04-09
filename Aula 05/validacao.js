@@ -12,7 +12,6 @@ function validarCadastro() {
         alert("Cadastro inválido!\n\nO nome deve ter mais de 3 caracteres.");
         return;
     }
-
     // Validação da data de nascimento
     if (!dataNascimento) {
         alert("Cadastro inválido!\n\nPor favor, informe a data de nascimento.");
@@ -51,6 +50,7 @@ function validarCadastro() {
     // Se chegou até aqui, está tudo certo
     document.getElementById('formCadastro').style.display = 'none';
     document.getElementById('titulo').innerHTML = `Bem-vindo(a), ${nome}!`;
+    
     if (animais>3){
         texto_sobre = 'Você ama animais.'
     } else if(animais>0){

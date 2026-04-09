@@ -1,0 +1,9 @@
+Calculadora de IMC
+Crie uma função calcularIMC(peso, altura) que calcula o Índice de Massa Corporal.
+Fórmula: imc = peso / (altura * altura)
+Depois mostre uma mensagem:
+
+Abaixo de 18.5 → "Abaixo do peso"
+Entre 18.5 e 24.9 → "Peso normal"
+Entre 25 e 29.9 → "Sobrepeso"
+30 ou mais → "Obesidade"

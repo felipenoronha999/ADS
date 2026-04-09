@@ -1,0 +1,1 @@
+document.getElementById('identificador').innerHTML = 'olá, turma!'
