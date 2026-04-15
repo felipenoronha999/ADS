@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <livro>
+        <titulo>Dom Casmurro</titulo>
+        <autor>Machado de Assis</autor>
+        <ano>1899</ano>
+    </livro>
+    <livro>
+        <titulo>O Guarani</titulo>
+        <autor>José de Alencar</autor>
+        <ano>1857</ano>
+    </livro>
+</biblioteca>

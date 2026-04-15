@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livros>
+    <livro id="1" disponivel="sim">
+        <titulo>O Alquimista</titulo>
+        <autor>Paulo Coelho</autor>
+        <ano>1988</ano>
+        <genero>Ficção</genero>
+        <capa>https://picsum.photos/id/100/300/200</capa>
+    </livro>
+    <livro id="2" disponivel="nao">
+        <titulo>Dom Casmurro</titulo>
+        <autor>Machado de Assis</autor>
+        <ano>1899</ano>
+        <genero>Clássico</genero>
+        <capa>https://picsum.photos/id/101/300/200</capa>
+    </livro>
+    <livro id="3" disponivel="sim">
+        <titulo>A Culpa é das Estrelas</titulo>
+        <autor>John Green</autor>
+        <ano>2012</ano>
+        <genero>Romance</genero>
+        <capa>https://picsum.photos/id/102/300/200</capa>
+    </livro>
+    <livro id="4" disponivel="sim">
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <ano>1949</ano>
+        <genero>Distopia</genero>
+        <capa>https://picsum.photos/id/103/300/200</capa>
+    </livro>
+    <livro id="5" disponivel="nao">
+        <titulo>O Pequeno Príncipe</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <ano>1943</ano>
+        <genero>Infantil</genero>
+        <capa>https://picsum.photos/id/104/300/200</capa>
+    </livro>
+</livros>

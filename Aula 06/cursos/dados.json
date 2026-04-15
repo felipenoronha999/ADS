@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titulo": "JavaScript Essencial",
+    "descricao": "Fundamentos da linguagem que movimenta a web moderna.",
+    "categoria": "Programação",
+    "imagem": "https://picsum.photos/id/1/300/200"
+  },
+  {
+    "id": 2,
+    "titulo": "HTML5 & Semântica",
+    "descricao": "Estruturação correta de páginas para acessibilidade e SEO.",
+    "categoria": "Front-end",
+    "imagem": "https://picsum.photos/id/2/300/200"
+  },
+  {
+    "id": 3,
+    "titulo": "CSS Grid e Flexbox",
+    "descricao": "Layouts modernos e responsivos com pouco código.",
+    "categoria": "Front-end",
+    "imagem": "https://picsum.photos/id/3/300/200"
+  },
+  {
+    "id": 4,
+    "titulo": "Python para Dados",
+    "descricao": "Análise e visualização de dados com Pandas e Matplotlib.",
+    "categoria": "Data Science",
+    "imagem": "https://picsum.photos/id/4/300/200"
+  },
+  {
+    "id": 5,
+    "titulo": "React na Prática",
+    "descricao": "Componentes, estado e hooks para criar interfaces reativas.",
+    "categoria": "Framework",
+    "imagem": "https://picsum.photos/id/5/300/200"
+  },
+  {
+    "id": 6,
+    "titulo": "Node.js e APIs",
+    "descricao": "Construindo back-end escalável com JavaScript.",
+    "categoria": "Back-end",
+    "imagem": "https://picsum.photos/id/6/300/200"
+  },
+  {
+    "id": 7,
+    "titulo": "SQL Otimizado",
+    "descricao": "Consultas eficientes e boas práticas em bancos relacionais.",
+    "categoria": "Banco de Dados",
+    "imagem": "https://picsum.photos/id/7/300/200"
+  },
+  {
+    "id": 8,
+    "titulo": "Git e Colaboração",
+    "descricao": "Versionamento de código e trabalho em equipe.",
+    "categoria": "Ferramentas",
+    "imagem": "https://picsum.photos/id/8/300/200"
+  },
+  {
+    "id": 9,
+    "titulo": "UI/UX Design",
+    "descricao": "Princípios de experiência e interface do usuário.",
+    "categoria": "Design",
+    "imagem": "https://picsum.photos/id/9/300/200"
+  },
+  {
+    "id": 10,
+    "titulo": "Segurança Web",
+    "descricao": "Protegendo aplicações contra ameaças comuns.",
+    "categoria": "Segurança",
+    "imagem": "https://picsum.photos/id/10/300/200"
+  }
+]

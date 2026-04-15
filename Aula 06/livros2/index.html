@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Manuseio XML</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        .bloco { background: #f4f4f4; padding: 15px; border-left: 5px solid #333; margin-bottom: 10px; }
+        span { color: blue; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Extraindo Dados do XML</h1>
+    
+    <div class="bloco">
+        <p><strong>exemplo 1:</strong> <span id="exemplo1"></span></p>
+    </div>
+
+    <div class="bloco">
+        <p><strong>exemplo 2:</strong> <span id="exemplo2"></span></p>
+    </div>
+
+    <script>
+        // 1. Carregar o arquivo XML
+        fetch('dados.xml')
+            .then(response => response.text())
+            .then(data => {
+                let parser = new DOMParser();
+                let xmlDoc = parser.parseFromString(data, "text/xml");
+
+                
+
+                // --- EXEMPLO 1: 
+                let primeiroLivro = xmlDoc.getElementsByTagName("livro")[0];
+                
+                let autorPrimeiroLivro = primeiroLivro.children[0].innerHTML; 
+
+                // --- EXEMPLO 2: 
+                let tituloSegundoLivro = xmlDoc.getElementsByTagName("titulo")[0].childNodes[0].nodeValue;
+
+                
+
+                document.getElementById("exemplo1").innerHTML = autorPrimeiroLivro;
+                document.getElementById("exemplo2").innerHTML = tituloSegundoLivro;
+                
+
+            })
+            .catch(error => console.error('Erro ao carregar XML:', error));
+    </script>
+</body>
+</html>

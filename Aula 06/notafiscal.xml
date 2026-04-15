@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe35180407689002000189551200000002051956156304" versao="4.00">
+      
+      <ide>
+        <cUF>35</cUF>
+        <natOp>EXPORTACAO DE DOIS produtores</natOp>
+        <mod>55</mod>
+        <serie>120</serie>
+        <nNF>205</nNF>
+        <dhEmi>2018-04-01T00:00:00-03:00</dhEmi>
+        <tpNF>1</tpNF>
+        </ide>
+
+      <emit>
+        <CNPJ>07689002000189</CNPJ>
+        <xNome>EMBRAER S/A</xNome>
+        <enderEmit>
+          <xBairro>DMDMDMDMMD</xBairro>
+          <cMun>3549904</cMun>
+          <xMun>Sao Jose dos Campos</xMun>
+          <UF>SP</UF>
+        </enderEmit>
+      </emit>
+
+      <dest>
+        <xNome>Exterior</xNome>
+        <enderDest>
+          <xPais>CABO VERDE, REPUBLICA DE</xPais>
+        </enderDest>
+      </dest>
+
+      <det nItem="1">
+        <prod>
+          <cProd>1</cProd>
+          <NCM>14011100</NCM>
+          <qCom>11.25</qCom>
+          <uCom>UN</uCom>
+          <vUnCom>1600.0000</vUnCom>
+          <vProd>18000.00</vProd>
+        </prod>
+      </det>
+
+      <total>
+        <ICMSTot>
+          <vBC>0.00</vBC>
+          <vICMS>0.00</vICMS>
+          <vNF>20000.00</vNF>
+        </ICMSTot>
+      </total>
+
+    </infNFe>
+
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <Reference URI="#NFe35180407689002000189551200000002051956156304">
+          <DigestValue>nDePe/+AjpPisrcD4Ysc0ztpWw=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>
+        JNUi0Zm9VPqzbicXBx8vkcn9hnZE0HIKaOLUAO9uIDZS9CSZb4FDmR1wSS...
+      </SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>MIIG6DCCBNCgAwIBAgIDAKcOMA0GCSqGSIb3DQEBCwUAMIGbMQswCQYDVQQGEwJCU...</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+  </NFe>
+
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>2</tpAmb> <verAplic>SP_NFE_PL_008f</verAplic>
+      <chNFe>35180407689002000189551200000002051956156304</chNFe>
+      <dhRecbto>2018-04-01T00:10:00-03:00</dhRecbto>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NFe</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>
