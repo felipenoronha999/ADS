@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLearn — Plataforma de Cursos Online</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* Somente fonte e cor de marca — tudo layout/componente é Bootstrap puro */
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3, h4, h5, .navbar-brand { font-family: 'Syne', sans-serif; }
+    :root { --bs-primary: #0d6efd; --bs-primary-rgb: 13,110,253; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="bi bi-lightning-charge-fill text-warning me-1"></i>TechLearn
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#instrutores">Instrutores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn btn-outline-light btn-sm">Entrar</a>
+          <a href="#" class="btn btn-warning btn-sm fw-semibold">Cadastrar-se</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="inicio" class="bg-dark text-white py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-warning text-dark mb-3 fs-6 px-3 py-2">
+            <i class="bi bi-fire me-1"></i> +500 cursos disponíveis
+          </span>
+          <h1 class="display-4 fw-bold lh-sm mb-4">
+            Aprenda. Cresça.<br />
+            <span class="text-warning">Transforme</span> sua carreira.
+          </h1>
+          <p class="lead text-white-50 mb-4">
+            Mais de <strong class="text-white">500 cursos</strong> nas áreas de tecnologia, design e negócios.
+            Aprenda no seu ritmo com instrutores especialistas do mercado.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <a href="#cursos" class="btn btn-warning btn-lg fw-bold px-4">
+              <i class="bi bi-play-circle me-2"></i>Ver todos os cursos
+            </a>
+            <a href="#precos" class="btn btn-outline-light btn-lg px-4">
+              <i class="bi bi-gem me-2"></i>Assinar agora
+            </a>
+          </div>
+
+          <!-- Estatísticas -->
+          <div class="row g-3 border-top border-secondary pt-4">
+            <div class="col-6 col-md-3 text-center">
+              <div class="h3 fw-bold text-warning mb-0">12k+</div>
+              <small class="text-white-50">Alunos ativos</small>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+              <div class="h3 fw-bold text-warning mb-0">500+</div>
+              <small class="text-white-50">Cursos</small>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+              <div class="h3 fw-bold text-warning mb-0">80+</div>
+              <small class="text-white-50">Instrutores</small>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+              <div class="h3 fw-bold text-warning mb-0">98%</div>
+              <small class="text-white-50">Satisfação</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://placehold.co/600x420/1a1a2e/f8c200?text=Aprenda+Online" alt="Estudante aprendendo" class="img-fluid rounded-4 shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUSCA ===================== -->
+  <section class="bg-primary py-5">
+    <div class="container">
+      <h2 class="text-white text-center fw-bold mb-4">O que você quer aprender hoje?</h2>
+      <form class="row g-2 justify-content-center">
+        <div class="col-md-5">
+          <input type="search" class="form-control form-control-lg" placeholder="Ex: HTML, Python, UX Design..." />
+        </div>
+        <div class="col-md-3">
+          <select class="form-select form-select-lg">
+            <option value="">Todas as categorias</option>
+            <option value="dev">Desenvolvimento</option>
+            <option value="design">Design</option>
+            <option value="dados">Dados</option>
+            <option value="negocios">Negócios</option>
+            <option value="marketing">Marketing</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
+            <i class="bi bi-search me-1"></i>Buscar
+          </button>
+        </div>
+      </form>
+      <div class="text-center mt-3">
+        <small class="text-white-50 me-2">Buscas populares:</small>
+        <a href="#" class="badge bg-white text-primary text-decoration-none me-1 py-2 px-3">JavaScript</a>
+        <a href="#" class="badge bg-white text-primary text-decoration-none me-1 py-2 px-3">React</a>
+        <a href="#" class="badge bg-white text-primary text-decoration-none me-1 py-2 px-3">Python</a>
+        <a href="#" class="badge bg-white text-primary text-decoration-none me-1 py-2 px-3">UI/UX</a>
+        <a href="#" class="badge bg-white text-primary text-decoration-none me-1 py-2 px-3">Machine Learning</a>
+        <a href="#" class="badge bg-white text-primary text-decoration-none py-2 px-3">Node.js</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CATEGORIAS ===================== -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Explore por Categoria</h2>
+        <p class="text-muted lead">Encontre o curso perfeito para o seu objetivo profissional.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">💻</div>
+              <h5 class="card-title fw-bold">Desenvolvimento Web</h5>
+              <span class="badge bg-primary-subtle text-primary">120 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">🎨</div>
+              <h5 class="card-title fw-bold">Design & UX</h5>
+              <span class="badge bg-danger-subtle text-danger">85 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">📊</div>
+              <h5 class="card-title fw-bold">Ciência de Dados</h5>
+              <span class="badge bg-success-subtle text-success">64 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">📱</div>
+              <h5 class="card-title fw-bold">Dev Mobile</h5>
+              <span class="badge bg-warning-subtle text-warning">47 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">☁️</div>
+              <h5 class="card-title fw-bold">Cloud & DevOps</h5>
+              <span class="badge bg-info-subtle text-info">39 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">🤖</div>
+              <h5 class="card-title fw-bold">Inteligência Artificial</h5>
+              <span class="badge bg-purple-subtle text-purple">52 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">🔒</div>
+              <h5 class="card-title fw-bold">Cibersegurança</h5>
+              <span class="badge bg-dark-subtle text-dark">28 cursos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3">
+            <div class="card-body">
+              <div class="display-5 mb-3">📈</div>
+              <h5 class="card-title fw-bold">Negócios & Gestão</h5>
+              <span class="badge bg-secondary-subtle text-secondary">73 cursos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CURSOS EM DESTAQUE ===================== -->
+  <section id="cursos" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Cursos em Destaque</h2>
+        <p class="text-muted lead">Selecionados pelos nossos especialistas com base na procura e qualidade do conteúdo.</p>
+      </div>
+
+      <!-- Abas de filtro -->
+      <ul class="nav nav-pills justify-content-center mb-5" id="cursosTab">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#todos">Todos</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#populares">Mais Populares</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#novidades">Novidades</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#gratuitos">Gratuitos</button>
+        </li>
+      </ul>
+
+      <!-- Grade de cursos -->
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x220/0d6efd/ffffff?text=HTML5+%26+CSS3" class="card-img-top" alt="HTML e CSS" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-primary-subtle text-primary mb-2 w-auto align-self-start">Desenvolvimento Web</span>
+              <h5 class="card-title fw-bold">HTML5 & CSS3 do Zero ao Avançado</h5>
+              <p class="card-text text-muted small flex-grow-1">Domine os fundamentos da web e construa interfaces modernas e responsivas.</p>
+              <div class="d-flex align-items-center mb-2">
+                <img src="https://placehold.co/28x28/6c757d/fff?text=AV" class="rounded-circle me-2" alt="Ana Vieira" />
+                <small class="text-muted">Ana Vieira</small>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="text-warning fw-bold small">⭐ 4.9</span>
+                <small class="text-muted">(2.341 avaliações)</small>
+              </div>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><i class="bi bi-play-circle me-2 text-primary"></i>42 horas de vídeo</li>
+                <li><i class="bi bi-code-slash me-2 text-primary"></i>15 projetos práticos</li>
+                <li><i class="bi bi-award me-2 text-primary"></i>Certificado incluso</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <div>
+                  <span class="h5 fw-bold text-primary mb-0">R$ 89,90</span>
+                  <del class="text-muted small ms-2">R$ 199,90</del>
+                </div>
+                <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow rounded-4 overflow-hidden border-primary border-2">
+            <div class="position-relative">
+              <img src="https://placehold.co/400x220/198754/ffffff?text=JavaScript+ES6%2B" class="card-img-top" alt="JavaScript" />
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2">Mais Popular</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-primary-subtle text-primary mb-2 w-auto align-self-start">Desenvolvimento Web</span>
+              <h5 class="card-title fw-bold">JavaScript Moderno: ES6+ e Além</h5>
+              <p class="card-text text-muted small flex-grow-1">Aprenda JavaScript do básico ao avançado com projetos reais e desafios práticos.</p>
+              <div class="d-flex align-items-center mb-2">
+                <img src="https://placehold.co/28x28/198754/fff?text=RC" class="rounded-circle me-2" alt="Rafael Costa" />
+                <small class="text-muted">Rafael Costa</small>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="text-warning fw-bold small">⭐ 4.8</span>
+                <small class="text-muted">(5.120 avaliações)</small>
+              </div>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><i class="bi bi-play-circle me-2 text-success"></i>68 horas de vídeo</li>
+                <li><i class="bi bi-code-slash me-2 text-success"></i>25 projetos práticos</li>
+                <li><i class="bi bi-award me-2 text-success"></i>Certificado incluso</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <div>
+                  <span class="h5 fw-bold text-success mb-0">R$ 119,90</span>
+                  <del class="text-muted small ms-2">R$ 249,90</del>
+                </div>
+                <a href="#" class="btn btn-success btn-sm rounded-pill px-3">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x220/0dcaf0/212529?text=React.js" class="card-img-top" alt="React" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-info-subtle text-info mb-2 w-auto align-self-start">Desenvolvimento Web</span>
+              <h5 class="card-title fw-bold">React.js: Construindo SPAs Modernas</h5>
+              <p class="card-text text-muted small flex-grow-1">Desenvolva aplicações web completas com React, Hooks, Context API e muito mais.</p>
+              <div class="d-flex align-items-center mb-2">
+                <img src="https://placehold.co/28x28/0dcaf0/212529?text=JS" class="rounded-circle me-2" alt="Julia Santos" />
+                <small class="text-muted">Julia Santos</small>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="text-warning fw-bold small">⭐ 4.7</span>
+                <small class="text-muted">(3.876 avaliações)</small>
+              </div>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><i class="bi bi-play-circle me-2 text-info"></i>55 horas de vídeo</li>
+                <li><i class="bi bi-code-slash me-2 text-info"></i>20 projetos práticos</li>
+                <li><i class="bi bi-award me-2 text-info"></i>Certificado incluso</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <div>
+                  <span class="h5 fw-bold text-info mb-0">R$ 109,90</span>
+                  <del class="text-muted small ms-2">R$ 229,90</del>
+                </div>
+                <a href="#" class="btn btn-info btn-sm rounded-pill px-3">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="position-relative">
+              <img src="https://placehold.co/400x220/ffc107/212529?text=Python+Dados" class="card-img-top" alt="Python" />
+              <span class="badge bg-success position-absolute top-0 end-0 m-2">Novidade</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-warning-subtle text-warning mb-2 w-auto align-self-start">Ciência de Dados</span>
+              <h5 class="card-title fw-bold">Python para Ciência de Dados</h5>
+              <p class="card-text text-muted small flex-grow-1">Pandas, NumPy, Matplotlib e Machine Learning com projetos de análise reais.</p>
+              <div class="d-flex align-items-center mb-2">
+                <img src="https://placehold.co/28x28/ffc107/212529?text=MP" class="rounded-circle me-2" alt="Marcos Pinto" />
+                <small class="text-muted">Marcos Pinto</small>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="text-warning fw-bold small">⭐ 4.9</span>
+                <small class="text-muted">(1.654 avaliações)</small>
+              </div>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><i class="bi bi-play-circle me-2 text-warning"></i>72 horas de vídeo</li>
+                <li><i class="bi bi-code-slash me-2 text-warning"></i>30 projetos práticos</li>
+                <li><i class="bi bi-award me-2 text-warning"></i>Certificado incluso</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <div>
+                  <span class="h5 fw-bold text-warning mb-0">R$ 129,90</span>
+                  <del class="text-muted small ms-2">R$ 279,90</del>
+                </div>
+                <a href="#" class="btn btn-warning btn-sm rounded-pill px-3">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x220/dc3545/ffffff?text=UI+Design+Figma" class="card-img-top" alt="UI Design" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-danger-subtle text-danger mb-2 w-auto align-self-start">Design & UX</span>
+              <h5 class="card-title fw-bold">UI Design com Figma: Do Conceito ao Protótipo</h5>
+              <p class="card-text text-muted small flex-grow-1">Crie interfaces bonitas e funcionais utilizando Figma do zero ao avançado.</p>
+              <div class="d-flex align-items-center mb-2">
+                <img src="https://placehold.co/28x28/dc3545/fff?text=CA" class="rounded-circle me-2" alt="Carla Almeida" />
+                <small class="text-muted">Carla Almeida</small>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="text-warning fw-bold small">⭐ 4.8</span>
+                <small class="text-muted">(2.903 avaliações)</small>
+              </div>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><i class="bi bi-play-circle me-2 text-danger"></i>38 horas de vídeo</li>
+                <li><i class="bi bi-code-slash me-2 text-danger"></i>12 projetos práticos</li>
+                <li><i class="bi bi-award me-2 text-danger"></i>Certificado incluso</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <div>
+                  <span class="h5 fw-bold text-danger mb-0">R$ 99,90</span>
+                  <del class="text-muted small ms-2">R$ 199,90</del>
+                </div>
+                <a href="#" class="btn btn-danger btn-sm rounded-pill px-3">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x220/6f42c1/ffffff?text=Node.js+APIs" class="card-img-top" alt="Node.js" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-primary-subtle text-primary mb-2 w-auto align-self-start">Desenvolvimento Web</span>
+              <h5 class="card-title fw-bold">Node.js e APIs REST com Express</h5>
+              <p class="card-text text-muted small flex-grow-1">Construa back-ends robustos com Node.js, Express, bancos de dados e JWT.</p>
+              <div class="d-flex align-items-center mb-2">
+                <img src="https://placehold.co/28x28/6f42c1/fff?text=TF" class="rounded-circle me-2" alt="Thiago Ferreira" />
+                <small class="text-muted">Thiago Ferreira</small>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="text-warning fw-bold small">⭐ 4.6</span>
+                <small class="text-muted">(1.298 avaliações)</small>
+              </div>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><i class="bi bi-play-circle me-2 text-primary"></i>49 horas de vídeo</li>
+                <li><i class="bi bi-code-slash me-2 text-primary"></i>18 projetos práticos</li>
+                <li><i class="bi bi-award me-2 text-primary"></i>Certificado incluso</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <div>
+                  <span class="h5 fw-bold text-primary mb-0">R$ 109,90</span>
+                  <del class="text-muted small ms-2">R$ 219,90</del>
+                </div>
+                <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-outline-primary btn-lg rounded-pill px-5">
+          Ver todos os 500+ cursos <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BANNER PROMOCIONAL ===================== -->
+  <section class="bg-warning py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h2 class="display-6 fw-bold mb-2">
+            <i class="bi bi-fire me-2"></i>Oferta por tempo limitado!
+          </h2>
+          <p class="lead mb-2">Assine o Plano Anual hoje e ganhe acesso ilimitado com <strong>60% de desconto</strong>.</p>
+          <p class="mb-4">Use o cupom: <span class="badge bg-dark fs-6 px-3 py-2">TECHLEARN60</span></p>
+          <a href="#precos" class="btn btn-dark btn-lg rounded-pill px-5 fw-bold">
+            <i class="bi bi-lightning me-2"></i>Quero aproveitar
+          </a>
+        </div>
+        <div class="col-lg-5">
+          <p class="fw-bold text-center mb-3">A oferta expira em:</p>
+          <div class="d-flex justify-content-center gap-3">
+            <div class="card bg-dark text-white text-center px-3 py-2 rounded-3 border-0">
+              <span class="display-6 fw-bold lh-1">02</span>
+              <small>Dias</small>
+            </div>
+            <div class="card bg-dark text-white text-center px-3 py-2 rounded-3 border-0">
+              <span class="display-6 fw-bold lh-1">14</span>
+              <small>Horas</small>
+            </div>
+            <div class="card bg-dark text-white text-center px-3 py-2 rounded-3 border-0">
+              <span class="display-6 fw-bold lh-1">37</span>
+              <small>Min</small>
+            </div>
+            <div class="card bg-dark text-white text-center px-3 py-2 rounded-3 border-0">
+              <span class="display-6 fw-bold lh-1">50</span>
+              <small>Seg</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTRUTORES ===================== -->
+  <section id="instrutores" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Conheça Nossos Instrutores</h2>
+        <p class="text-muted lead">Profissionais com experiência comprovada no mercado e paixão pelo ensino.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+            <img src="https://placehold.co/100x100/0d6efd/fff?text=AV" class="rounded-circle mx-auto mb-3 border border-3 border-primary" width="100" alt="Ana Vieira" />
+            <h5 class="fw-bold mb-0">Ana Vieira</h5>
+            <p class="text-primary small mb-2">Dev Front-end Sênior</p>
+            <p class="text-muted small">10 anos de exp. Ex-Google e Nubank.</p>
+            <div class="d-flex justify-content-center gap-3 text-muted small mb-3">
+              <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+              <span><i class="bi bi-collection"></i> 12 cursos</span>
+              <span><i class="bi bi-people"></i> 8.4k</span>
+            </div>
+            <div class="d-flex justify-content-center gap-2 mt-auto">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">LinkedIn</a>
+              <a href="#" class="btn btn-outline-dark btn-sm rounded-pill">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+            <img src="https://placehold.co/100x100/198754/fff?text=RC" class="rounded-circle mx-auto mb-3 border border-3 border-success" width="100" alt="Rafael Costa" />
+            <h5 class="fw-bold mb-0">Rafael Costa</h5>
+            <p class="text-success small mb-2">Eng. Software Full Stack</p>
+            <p class="text-muted small">Especialista em JS. Ex-Amazon e iFood.</p>
+            <div class="d-flex justify-content-center gap-3 text-muted small mb-3">
+              <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+              <span><i class="bi bi-collection"></i> 18 cursos</span>
+              <span><i class="bi bi-people"></i> 22k</span>
+            </div>
+            <div class="d-flex justify-content-center gap-2 mt-auto">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">LinkedIn</a>
+              <a href="#" class="btn btn-outline-dark btn-sm rounded-pill">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+            <img src="https://placehold.co/100x100/0dcaf0/212529?text=JS" class="rounded-circle mx-auto mb-3 border border-3 border-info" width="100" alt="Julia Santos" />
+            <h5 class="fw-bold mb-0">Julia Santos</h5>
+            <p class="text-info small mb-2">Especialista React & Next.js</p>
+            <p class="text-muted small">Contribuidora open source e palestrante.</p>
+            <div class="d-flex justify-content-center gap-3 text-muted small mb-3">
+              <span><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+              <span><i class="bi bi-collection"></i> 9 cursos</span>
+              <span><i class="bi bi-people"></i> 15k</span>
+            </div>
+            <div class="d-flex justify-content-center gap-2 mt-auto">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">LinkedIn</a>
+              <a href="#" class="btn btn-outline-dark btn-sm rounded-pill">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+            <img src="https://placehold.co/100x100/ffc107/212529?text=MP" class="rounded-circle mx-auto mb-3 border border-3 border-warning" width="100" alt="Marcos Pinto" />
+            <h5 class="fw-bold mb-0">Marcos Pinto</h5>
+            <p class="text-warning small mb-2">Data Scientist & ML Engineer</p>
+            <p class="text-muted small">Doutor pela USP. Pesquisador de IA.</p>
+            <div class="d-flex justify-content-center gap-3 text-muted small mb-3">
+              <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+              <span><i class="bi bi-collection"></i> 7 cursos</span>
+              <span><i class="bi bi-people"></i> 9.8k</span>
+            </div>
+            <div class="d-flex justify-content-center gap-2 mt-auto">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">LinkedIn</a>
+              <a href="#" class="btn btn-outline-dark btn-sm rounded-pill">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-outline-secondary btn-lg rounded-pill px-5">Ver todos os instrutores →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Como a TechLearn Funciona</h2>
+        <p class="text-muted lead">Simples, flexível e eficiente. Veja como começar sua jornada.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-lg-2 text-center">
+          <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;font-size:1.5rem;font-weight:800;">1</div>
+          <h6 class="fw-bold">Crie sua conta</h6>
+          <p class="text-muted small">Cadastre-se grátis em menos de 2 minutos.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 text-center">
+          <div class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;font-size:1.5rem;font-weight:800;">2</div>
+          <h6 class="fw-bold">Escolha seu curso</h6>
+          <p class="text-muted small">Explore o catálogo e use filtros.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 text-center">
+          <div class="rounded-circle bg-info text-white d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;font-size:1.5rem;font-weight:800;">3</div>
+          <h6 class="fw-bold">Aprenda no seu ritmo</h6>
+          <p class="text-muted small">Acesso vitalício ao conteúdo.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 text-center">
+          <div class="rounded-circle bg-warning text-dark d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;font-size:1.5rem;font-weight:800;">4</div>
+          <h6 class="fw-bold">Pratique projetos</h6>
+          <p class="text-muted small">Projetos reais para fixar o conteúdo.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 text-center">
+          <div class="rounded-circle bg-danger text-white d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;font-size:1.5rem;font-weight:800;">5</div>
+          <h6 class="fw-bold">Conquiste o certificado</h6>
+          <p class="text-muted small">Certificado para o mercado de trabalho.</p>
+        </div>
+      </div>
+      <div class="mt-5">
+        <img src="https://placehold.co/1140x280/212529/ffc107?text=Fluxo+de+Aprendizado+TechLearn" alt="Fluxo de aprendizado" class="img-fluid rounded-4 w-100" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section id="depoimentos" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">O que nossos alunos dizem</h2>
+        <p class="text-white-50 lead">Mais de 12.000 estudantes transformaram suas carreiras com a TechLearn.</p>
+      </div>
+
+      <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-5">
+                <div class="card bg-secondary bg-opacity-25 border-0 rounded-4 p-4 h-100 text-white">
+                  <div class="mb-3 text-warning">⭐⭐⭐⭐⭐</div>
+                  <p class="fst-italic mb-4">"A TechLearn mudou minha vida. Em 8 meses consegui meu primeiro emprego como desenvolvedora front-end. Os projetos práticos fizeram toda a diferença!"</p>
+                  <div class="d-flex align-items-center mt-auto">
+                    <img src="https://placehold.co/50x50/0d6efd/fff?text=FM" class="rounded-circle me-3" width="50" alt="Fernanda Melo" />
+                    <div>
+                      <strong>Fernanda Melo</strong>
+                      <div class="small text-white-50">Dev Front-end na Totvs</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5">
+                <div class="card bg-secondary bg-opacity-25 border-0 rounded-4 p-4 h-100 text-white">
+                  <div class="mb-3 text-warning">⭐⭐⭐⭐⭐</div>
+                  <p class="fst-italic mb-4">"Conteúdo de altíssima qualidade. Os instrutores são experientes e explicam de forma clara. Já fiz 4 cursos aqui e pretendo fazer muito mais!"</p>
+                  <div class="d-flex align-items-center mt-auto">
+                    <img src="https://placehold.co/50x50/198754/fff?text=PL" class="rounded-circle me-3" width="50" alt="Pedro Lopes" />
+                    <div>
+                      <strong>Pedro Lopes</strong>
+                      <div class="small text-white-50">Analista de Sistemas no Itaú</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-5">
+                <div class="card bg-secondary bg-opacity-25 border-0 rounded-4 p-4 h-100 text-white">
+                  <div class="mb-3 text-warning">⭐⭐⭐⭐⭐</div>
+                  <p class="fst-italic mb-4">"Migrei da administração para TI graças à TechLearn. A comunidade de alunos é incrível e sempre tem alguém disposto a ajudar. Recomendo a todos!"</p>
+                  <div class="d-flex align-items-center mt-auto">
+                    <img src="https://placehold.co/50x50/0dcaf0/212529?text=LR" class="rounded-circle me-3" width="50" alt="Larissa Ramos" />
+                    <div>
+                      <strong>Larissa Ramos</strong>
+                      <div class="small text-white-50">UX Designer na Vivo</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5">
+                <div class="card bg-secondary bg-opacity-25 border-0 rounded-4 p-4 h-100 text-white">
+                  <div class="mb-3 text-warning">⭐⭐⭐⭐⭐</div>
+                  <p class="fst-italic mb-4">"Melhor investimento que já fiz na minha carreira. Aprendi Python do zero e hoje trabalho com análise de dados. O suporte da plataforma é excelente!"</p>
+                  <div class="d-flex align-items-center mt-auto">
+                    <img src="https://placehold.co/50x50/ffc107/212529?text=BN" class="rounded-circle me-3" width="50" alt="Bruno Nascimento" />
+                    <div>
+                      <strong>Bruno Nascimento</strong>
+                      <div class="small text-white-50">Data Analyst no Magalu</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators position-relative mt-4">
+          <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="0" class="active bg-warning" aria-current="true"></button>
+          <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="1" class="bg-warning"></button>
+        </div>
+      </div>
+
+      <!-- Vídeo depoimento -->
+      <div class="text-center mt-5">
+        <h5 class="text-white-50 mb-3">Assista ao depoimento em vídeo</h5>
+        <video controls class="rounded-4 w-100" style="max-width:640px">
+          <source src="#" type="video/mp4" />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLANOS E PREÇOS ===================== -->
+  <section id="precos" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Planos e Preços</h2>
+        <p class="text-muted lead">Escolha o plano ideal para o seu objetivo. Cancele quando quiser.</p>
+        <div class="btn-group mt-2" role="group">
+          <input type="radio" class="btn-check" name="periodo" id="mensal" checked />
+          <label class="btn btn-outline-primary rounded-start-pill px-4" for="mensal">Mensal</label>
+          <input type="radio" class="btn-check" name="periodo" id="anual" />
+          <label class="btn btn-outline-primary rounded-end-pill px-4" for="anual">Anual <span class="badge bg-success ms-1">-40%</span></label>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center align-items-stretch">
+
+        <!-- Gratuito -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="card-body d-flex flex-column">
+              <h4 class="fw-bold">Gratuito</h4>
+              <p class="text-muted">Para quem quer experimentar</p>
+              <div class="mb-4">
+                <span class="display-5 fw-bold">R$ 0</span>
+                <span class="text-muted">/mês</span>
+              </div>
+              <ul class="list-unstyled mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>50 aulas gratuitas</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Fórum da comunidade</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>5 projetos práticos</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Certificado</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Suporte prioritário</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Downloads offline</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Mentoria ao vivo</li>
+              </ul>
+              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto fw-semibold">Começar grátis</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro (destaque) -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-lg rounded-4 p-4 bg-primary text-white position-relative overflow-hidden">
+            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 fs-6">Mais Popular</span>
+            <div class="card-body d-flex flex-column">
+              <h4 class="fw-bold">Pro</h4>
+              <p class="text-white-50">Para quem quer evoluir rápido</p>
+              <div class="mb-4">
+                <span class="display-5 fw-bold">R$ 49,90</span>
+                <span class="text-white-50">/mês</span>
+              </div>
+              <ul class="list-unstyled mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>500+ cursos</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Fórum da comunidade</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Projetos práticos</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Certificados ilimitados</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Suporte 24h</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Downloads offline</li>
+                <li class="mb-2 text-white-50"><i class="bi bi-x-circle me-2"></i>Mentoria ao vivo</li>
+              </ul>
+              <a href="#" class="btn btn-warning text-dark rounded-pill w-100 mt-auto fw-bold">Assinar Pro</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="card-body d-flex flex-column">
+              <h4 class="fw-bold">Enterprise</h4>
+              <p class="text-muted">Para equipes e empresas</p>
+              <div class="mb-4">
+                <span class="display-5 fw-bold">R$ 299,90</span>
+                <span class="text-muted">/mês por equipe</span>
+              </div>
+              <ul class="list-unstyled mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Tudo do plano Pro</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Até 20 usuários</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dashboard da equipe</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Conteúdo customizado</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Suporte dedicado</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mentoria ao vivo 2x/mês</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Relatórios gerenciais</li>
+              </ul>
+              <a href="#" class="btn btn-outline-dark rounded-pill w-100 mt-auto fw-semibold">Falar com vendas</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Garantia -->
+      <div class="alert alert-success border-0 shadow-sm rounded-4 text-center mt-5 py-4" role="alert">
+        <h5 class="fw-bold"><i class="bi bi-shield-check-fill me-2"></i>Garantia de 30 dias</h5>
+        <p class="mb-0">Se você não ficar satisfeito por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+      </div>
+
+      <!-- Tabela comparativa -->
+      <h4 class="fw-bold text-center mt-5 mb-4">Comparativo completo dos planos</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center rounded-4 overflow-hidden shadow-sm">
+          <thead class="table-dark">
+            <tr>
+              <th class="text-start">Recurso</th>
+              <th>Gratuito</th>
+              <th class="bg-primary text-white">Pro</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start fw-semibold">Acesso a cursos</td>
+              <td>50 aulas</td>
+              <td class="table-primary">500+ cursos</td>
+              <td>500+ cursos</td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Certificados</td>
+              <td><i class="bi bi-x text-danger fs-5"></i></td>
+              <td class="table-primary"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td><i class="bi bi-check-lg text-success fs-5"></i></td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Download offline</td>
+              <td><i class="bi bi-x text-danger fs-5"></i></td>
+              <td class="table-primary"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td><i class="bi bi-check-lg text-success fs-5"></i></td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Suporte</td>
+              <td>Comunidade</td>
+              <td class="table-primary">Prioritário 24h</td>
+              <td>Dedicado</td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Mentoria ao vivo</td>
+              <td><i class="bi bi-x text-danger fs-5"></i></td>
+              <td class="table-primary"><i class="bi bi-x text-danger fs-5"></i></td>
+              <td>2x por mês</td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Usuários</td>
+              <td>1</td>
+              <td class="table-primary">1</td>
+              <td>Até 20</td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Relatórios</td>
+              <td><i class="bi bi-x text-danger fs-5"></i></td>
+              <td class="table-primary">Básico</td>
+              <td>Completo</td>
+            </tr>
+            <tr>
+              <td class="text-start fw-semibold">Conteúdo customizado</td>
+              <td><i class="bi bi-x text-danger fs-5"></i></td>
+              <td class="table-primary"><i class="bi bi-x text-danger fs-5"></i></td>
+              <td><i class="bi bi-check-lg text-success fs-5"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BLOG ===================== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Blog & Novidades</h2>
+        <p class="text-muted lead">Fique por dentro das tendências de tecnologia e dicas de carreira.</p>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <article class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x200/0d6efd/fff?text=Tendências+Front-end" class="card-img-top" alt="Tendências" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-primary-subtle text-primary mb-2 w-auto align-self-start">Desenvolvimento Web</span>
+              <h5 class="card-title fw-bold">As 10 Tendências de Front-end para 2025</h5>
+              <p class="card-text text-muted small flex-grow-1">Descubra quais tecnologias e frameworks estão dominando o mercado.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <small class="text-muted"><time datetime="2025-03-15">15 Mar 2025</time> · 8 min</small>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Ler →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x200/198754/fff?text=Carreira+em+TI" class="card-img-top" alt="Carreira" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-success-subtle text-success mb-2 w-auto align-self-start">Carreira</span>
+              <h5 class="card-title fw-bold">Como conseguir seu primeiro emprego em TI em 2025</h5>
+              <p class="card-text text-muted small flex-grow-1">Um guia completo com estratégias práticas para quem está migrando de carreira.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <small class="text-muted"><time datetime="2025-03-10">10 Mar 2025</time> · 12 min</small>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Ler →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="https://placehold.co/400x200/ffc107/212529?text=Python+vs+JS" class="card-img-top" alt="Python vs JS" />
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-warning-subtle text-warning mb-2 w-auto align-self-start">Linguagens</span>
+              <h5 class="card-title fw-bold">Python vs JavaScript: qual aprender primeiro?</h5>
+              <p class="card-text text-muted small flex-grow-1">Comparamos as duas linguagens mais populares do mundo em termos de mercado.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <small class="text-muted"><time datetime="2025-03-05">5 Mar 2025</time> · 6 min</small>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-warning rounded-pill">Ler →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-outline-secondary btn-lg rounded-pill px-5">Ver todos os artigos →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARCEIROS ===================== -->
+  <section class="py-5 bg-light border-top">
+    <div class="container text-center">
+      <h5 class="text-muted fw-semibold mb-4">Empresas que contratam nossos alunos</h5>
+      <div class="row g-4 align-items-center justify-content-center">
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Google" alt="Google" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Amazon" alt="Amazon" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Nubank" alt="Nubank" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=iFood" alt="iFood" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Mercado+Livre" alt="Mercado Livre" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Totvs" alt="Totvs" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Stone" alt="Stone" class="img-fluid opacity-50" />
+        </div>
+        <div class="col-6 col-sm-3 col-md-auto">
+          <img src="https://placehold.co/130x45/dee2e6/6c757d?text=Vivo" alt="Vivo" class="img-fluid opacity-50" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Perguntas Frequentes</h2>
+      </div>
+      <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Como funciona o acesso aos cursos?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Após se inscrever, você terá acesso imediato ao conteúdo pelo nosso site ou aplicativo mobile. O acesso ao conteúdo adquirido é vitalício.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Posso assistir offline?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Sim! Com os planos Pro e Enterprise você pode baixar as aulas pelo aplicativo mobile e assistir sem internet.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Os certificados são reconhecidos pelo mercado?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Nossos certificados são amplamente aceitos por empresas do setor de tecnologia. Você pode exportá-los diretamente para o LinkedIn.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              Qual é a política de cancelamento?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Você pode cancelar sua assinatura a qualquer momento pelo painel. O acesso permanece até o fim do período pago.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+              Existe suporte para dúvidas sobre o conteúdo?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Sim! Cada curso tem um fórum de discussões onde você pode tirar dúvidas com o instrutor e outros alunos.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+              Posso experimentar antes de pagar?
+            </button>
+          </h2>
+          <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Claro! Temos um plano gratuito com mais de 50 aulas para você conhecer a plataforma antes de assinar.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+              Os cursos são atualizados com frequência?
+            </button>
+          </h2>
+          <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Sim. Todos os cursos são revisados e atualizados regularmente para acompanhar as mudanças do mercado tecnológico.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center">
+          <h2 class="fw-bold mb-2">Fique por dentro das novidades!</h2>
+          <p class="text-white-50 mb-4">Cadastre-se e receba conteúdos exclusivos, descontos e lançamentos direto no seu e-mail.</p>
+          <form class="row g-2 justify-content-center">
+            <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Seu nome" required />
+            </div>
+            <div class="col-md-4">
+              <input type="email" class="form-control" placeholder="Seu melhor e-mail" required />
+            </div>
+            <div class="col-md-3">
+              <select class="form-select">
+                <option value="">Área de interesse</option>
+                <option>Desenvolvimento</option>
+                <option>Design</option>
+                <option>Dados</option>
+                <option>Carreira em TI</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <div class="form-check d-inline-flex align-items-center gap-2">
+                <input class="form-check-input" type="checkbox" id="lgpdNewsletter" required />
+                <label class="form-check-label text-white-50 small" for="lgpdNewsletter">
+                  Concordo em receber e-mails da TechLearn
+                </label>
+              </div>
+            </div>
+            <div class="col-12 mt-2">
+              <button type="submit" class="btn btn-warning btn-lg rounded-pill fw-bold px-5">
+                <i class="bi bi-envelope-check me-2"></i>Quero receber novidades
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Fale Conosco</h2>
+        <p class="text-muted lead">Tem alguma dúvida ou sugestão? Nossa equipe está pronta para te ajudar.</p>
+      </div>
+
+      <div class="row g-5">
+
+        <!-- Formulário -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 p-4">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Nome completo *</label>
+                  <input type="text" class="form-control rounded-3" placeholder="Seu nome completo" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">E-mail *</label>
+                  <input type="email" class="form-control rounded-3" placeholder="seu@email.com" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Telefone</label>
+                  <input type="tel" class="form-control rounded-3" placeholder="(11) 99999-9999" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Assunto *</label>
+                  <select class="form-select rounded-3" required>
+                    <option value="">Selecione um assunto</option>
+                    <option>Dúvida sobre cursos</option>
+                    <option>Questão financeira</option>
+                    <option>Suporte técnico</option>
+                    <option>Parceria / Negócios</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Mensagem *</label>
+                  <textarea class="form-control rounded-3" rows="5" placeholder="Descreva sua dúvida ou mensagem..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" required id="lgpdContato" />
+                    <label class="form-check-label text-muted small" for="lgpdContato">
+                      Concordo com a <a href="#" class="text-primary">Política de Privacidade</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold">
+                    <i class="bi bi-send me-2"></i>Enviar mensagem
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Informações -->
+        <div class="col-lg-5">
+          <h4 class="fw-bold mb-4">Outras formas de contato</h4>
+
+          <div class="d-flex gap-3 mb-3">
+            <div class="rounded-3 bg-primary text-white p-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px;flex-shrink:0">
+              <i class="bi bi-geo-alt-fill fs-5"></i>
+            </div>
+            <div>
+              <strong>Endereço</strong>
+              <p class="text-muted small mb-0">Av. Paulista, 1234 — Sala 56<br />São Paulo, SP — CEP 01310-100</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-3">
+            <div class="rounded-3 bg-success text-white p-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px;flex-shrink:0">
+              <i class="bi bi-telephone-fill fs-5"></i>
+            </div>
+            <div>
+              <strong>Telefone</strong>
+              <p class="text-muted small mb-0"><a href="tel:+551133334444" class="text-muted">(11) 3333-4444</a></p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-3">
+            <div class="rounded-3 bg-warning text-dark p-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px;flex-shrink:0">
+              <i class="bi bi-envelope-fill fs-5"></i>
+            </div>
+            <div>
+              <strong>E-mail</strong>
+              <p class="text-muted small mb-0"><a href="mailto:contato@techlearn.com.br" class="text-muted">contato@techlearn.com.br</a></p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-4">
+            <div class="rounded-3 bg-info text-white p-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px;flex-shrink:0">
+              <i class="bi bi-clock-fill fs-5"></i>
+            </div>
+            <div>
+              <strong>Horário</strong>
+              <p class="text-muted small mb-0">Segunda a Sexta, das 9h às 18h</p>
+            </div>
+          </div>
+
+          <h6 class="fw-bold mb-3">Redes Sociais</h6>
+          <div class="d-flex gap-2 mb-4">
+            <a href="#" class="btn btn-outline-danger btn-sm rounded-circle" style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-outline-primary btn-sm rounded-circle" style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="btn btn-outline-danger btn-sm rounded-circle" style="width:40px;height:40px;"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="btn btn-outline-dark btn-sm rounded-circle" style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-outline-dark btn-sm rounded-circle" style="width:40px;height:40px;"><i class="bi bi-github"></i></a>
+          </div>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975669!2d-46.6549!3d-23.5617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQyLjEiUyA0NsKwMzknMTcuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+            class="rounded-4 w-100 border-0"
+            height="200"
+            allowfullscreen=""
+            loading="lazy"
+            title="Localização TechLearn"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+
+        <div class="col-lg-3">
+          <h5 class="fw-bold mb-3">
+            <i class="bi bi-lightning-charge-fill text-warning me-1"></i>TechLearn
+          </h5>
+          <p class="text-white-50 small">Transformando carreiras através da educação em tecnologia desde 2019.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width:36px;height:36px;"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width:36px;height:36px;"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width:36px;height:36px;"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width:36px;height:36px;"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase text-white-50 small mb-3">Plataforma</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Cursos</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Instrutores</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Planos e Preços</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Certificados</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Blog</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Comunidade</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase text-white-50 small mb-3">Suporte</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Central de Ajuda</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">FAQ</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Contato</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Status do sistema</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Reportar problema</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase text-white-50 small mb-3">Empresa</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Sobre nós</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Trabalhe conosco</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Seja um instrutor</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Imprensa</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Investidores</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase text-white-50 small mb-3">Legal</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Termos de Uso</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Privacidade</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Cookies</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">LGPD</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary" />
+
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <small class="text-white-50">© 2025 TechLearn — Todos os direitos reservados.</small>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end align-items-center gap-2 mt-3 mt-md-0">
+          <small class="text-white-50 me-2">Formas de pagamento:</small>
+          <img src="https://placehold.co/55x32/343a40/adb5bd?text=Visa" alt="Visa" class="rounded-1" />
+          <img src="https://placehold.co/55x32/343a40/adb5bd?text=Master" alt="Mastercard" class="rounded-1" />
+          <img src="https://placehold.co/55x32/343a40/adb5bd?text=Pix" alt="Pix" class="rounded-1" />
+          <img src="https://placehold.co/55x32/343a40/adb5bd?text=Boleto" alt="Boleto" class="rounded-1" />
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

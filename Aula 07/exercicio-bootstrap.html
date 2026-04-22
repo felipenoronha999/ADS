@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLearn — Plataforma de Cursos Online</title>
+  <!-- TODO: Adicione o Bootstrap aqui! -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav>
+    <a href="#">TechLearn</a>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#instrutores">Instrutores</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#precos">Planos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div>
+      <a href="#">Entrar</a>
+      <a href="#">Cadastrar-se</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO / BANNER ===================== -->
+  <section id="inicio">
+    <div>
+      <h1>Aprenda. Cresça. Transforme sua carreira.</h1>
+      <p>
+        Mais de <strong>500 cursos</strong> nas áreas de tecnologia, design e negócios.
+        Aprenda no seu ritmo com instrutores especialistas do mercado.
+      </p>
+      <a href="#cursos">Ver todos os cursos</a>
+      <a href="#precos">Assinar agora</a>
+    </div>
+    <div>
+      <img src="https://placehold.co/600x400?text=Hero+Image" alt="Estudante aprendendo online" />
+    </div>
+
+    <!-- Estatísticas rápidas -->
+    <div>
+      <div>
+        <h2>12.000+</h2>
+        <p>Alunos ativos</p>
+      </div>
+      <div>
+        <h2>500+</h2>
+        <p>Cursos disponíveis</p>
+      </div>
+      <div>
+        <h2>80+</h2>
+        <p>Instrutores certificados</p>
+      </div>
+      <div>
+        <h2>98%</h2>
+        <p>Taxa de satisfação</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUSCA ===================== -->
+  <section>
+    <h2>O que você quer aprender hoje?</h2>
+    <form>
+      <input type="search" placeholder="Ex: HTML, Python, UX Design..." />
+      <select>
+        <option value="">Todas as categorias</option>
+        <option value="dev">Desenvolvimento</option>
+        <option value="design">Design</option>
+        <option value="dados">Dados</option>
+        <option value="negocios">Negócios</option>
+        <option value="marketing">Marketing</option>
+      </select>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Tags de busca rápida -->
+    <div>
+      <span>Buscas populares:</span>
+      <a href="#">JavaScript</a>
+      <a href="#">React</a>
+      <a href="#">Python</a>
+      <a href="#">UI/UX</a>
+      <a href="#">Machine Learning</a>
+      <a href="#">Node.js</a>
+    </div>
+  </section>
+
+  <!-- ===================== CATEGORIAS ===================== -->
+  <section>
+    <h2>Explore por Categoria</h2>
+    <p>Encontre o curso perfeito para o seu objetivo profissional.</p>
+
+    <div>
+      <div>
+        <img src="https://placehold.co/80x80?text=💻" alt="Desenvolvimento" />
+        <h3>Desenvolvimento Web</h3>
+        <p>120 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=🎨" alt="Design" />
+        <h3>Design & UX</h3>
+        <p>85 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=📊" alt="Dados" />
+        <h3>Ciência de Dados</h3>
+        <p>64 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=📱" alt="Mobile" />
+        <h3>Desenvolvimento Mobile</h3>
+        <p>47 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=☁️" alt="Cloud" />
+        <h3>Cloud & DevOps</h3>
+        <p>39 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=🤖" alt="IA" />
+        <h3>Inteligência Artificial</h3>
+        <p>52 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=🔒" alt="Segurança" />
+        <h3>Cibersegurança</h3>
+        <p>28 cursos</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/80x80?text=📈" alt="Negócios" />
+        <h3>Negócios & Gestão</h3>
+        <p>73 cursos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CURSOS EM DESTAQUE ===================== -->
+  <section id="cursos">
+    <h2>Cursos em Destaque</h2>
+    <p>Selecionados pelos nossos especialistas com base na procura e qualidade do conteúdo.</p>
+
+    <!-- Abas de filtro -->
+    <div>
+      <button>Todos</button>
+      <button>Mais Populares</button>
+      <button>Novidades</button>
+      <button>Gratuitos</button>
+    </div>
+
+    <!-- Grade de cursos -->
+    <div>
+
+      <!-- Card 1 -->
+      <div>
+        <img src="https://placehold.co/350x200?text=HTML+%26+CSS" alt="Curso HTML e CSS" />
+        <span>Desenvolvimento Web</span>
+        <h3>HTML5 & CSS3 do Zero ao Avançado</h3>
+        <p>Domine os fundamentos da web e construa interfaces modernas e responsivas.</p>
+        <div>
+          <img src="https://placehold.co/30x30?text=AV" alt="Ana Vieira" />
+          <span>Ana Vieira</span>
+        </div>
+        <div>
+          <span>⭐ 4.9</span>
+          <span>(2.341 avaliações)</span>
+        </div>
+        <ul>
+          <li>42 horas de vídeo</li>
+          <li>15 projetos práticos</li>
+          <li>Certificado incluso</li>
+        </ul>
+        <div>
+          <span>R$ 89,90</span>
+          <del>R$ 199,90</del>
+        </div>
+        <a href="#">Ver curso</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div>
+        <img src="https://placehold.co/350x200?text=JavaScript" alt="Curso JavaScript" />
+        <span>Desenvolvimento Web</span>
+        <span>Mais Popular</span>
+        <h3>JavaScript Moderno: ES6+ e Além</h3>
+        <p>Aprenda JavaScript do básico ao avançado com projetos reais e desafios práticos.</p>
+        <div>
+          <img src="https://placehold.co/30x30?text=RC" alt="Rafael Costa" />
+          <span>Rafael Costa</span>
+        </div>
+        <div>
+          <span>⭐ 4.8</span>
+          <span>(5.120 avaliações)</span>
+        </div>
+        <ul>
+          <li>68 horas de vídeo</li>
+          <li>25 projetos práticos</li>
+          <li>Certificado incluso</li>
+        </ul>
+        <div>
+          <span>R$ 119,90</span>
+          <del>R$ 249,90</del>
+        </div>
+        <a href="#">Ver curso</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div>
+        <img src="https://placehold.co/350x200?text=React" alt="Curso React" />
+        <span>Desenvolvimento Web</span>
+        <h3>React.js: Construindo SPAs Modernas</h3>
+        <p>Desenvolva aplicações web completas com React, Hooks, Context API e muito mais.</p>
+        <div>
+          <img src="https://placehold.co/30x30?text=JS" alt="Julia Santos" />
+          <span>Julia Santos</span>
+        </div>
+        <div>
+          <span>⭐ 4.7</span>
+          <span>(3.876 avaliações)</span>
+        </div>
+        <ul>
+          <li>55 horas de vídeo</li>
+          <li>20 projetos práticos</li>
+          <li>Certificado incluso</li>
+        </ul>
+        <div>
+          <span>R$ 109,90</span>
+          <del>R$ 229,90</del>
+        </div>
+        <a href="#">Ver curso</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div>
+        <img src="https://placehold.co/350x200?text=Python" alt="Curso Python" />
+        <span>Ciência de Dados</span>
+        <span>Novidade</span>
+        <h3>Python para Ciência de Dados</h3>
+        <p>Pandas, NumPy, Matplotlib e Machine Learning com projetos de análise reais.</p>
+        <div>
+          <img src="https://placehold.co/30x30?text=MP" alt="Marcos Pinto" />
+          <span>Marcos Pinto</span>
+        </div>
+        <div>
+          <span>⭐ 4.9</span>
+          <span>(1.654 avaliações)</span>
+        </div>
+        <ul>
+          <li>72 horas de vídeo</li>
+          <li>30 projetos práticos</li>
+          <li>Certificado incluso</li>
+        </ul>
+        <div>
+          <span>R$ 129,90</span>
+          <del>R$ 279,90</del>
+        </div>
+        <a href="#">Ver curso</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div>
+        <img src="https://placehold.co/350x200?text=UI+Design" alt="Curso UI Design" />
+        <span>Design & UX</span>
+        <h3>UI Design com Figma: Do Conceito ao Protótipo</h3>
+        <p>Crie interfaces bonitas e funcionais utilizando Figma do zero ao avançado.</p>
+        <div>
+          <img src="https://placehold.co/30x30?text=CA" alt="Carla Almeida" />
+          <span>Carla Almeida</span>
+        </div>
+        <div>
+          <span>⭐ 4.8</span>
+          <span>(2.903 avaliações)</span>
+        </div>
+        <ul>
+          <li>38 horas de vídeo</li>
+          <li>12 projetos práticos</li>
+          <li>Certificado incluso</li>
+        </ul>
+        <div>
+          <span>R$ 99,90</span>
+          <del>R$ 199,90</del>
+        </div>
+        <a href="#">Ver curso</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div>
+        <img src="https://placehold.co/350x200?text=Node.js" alt="Curso Node.js" />
+        <span>Desenvolvimento Web</span>
+        <h3>Node.js e APIs REST com Express</h3>
+        <p>Construa back-ends robustos com Node.js, Express, bancos de dados e autenticação JWT.</p>
+        <div>
+          <img src="https://placehold.co/30x30?text=TF" alt="Thiago Ferreira" />
+          <span>Thiago Ferreira</span>
+        </div>
+        <div>
+          <span>⭐ 4.6</span>
+          <span>(1.298 avaliações)</span>
+        </div>
+        <ul>
+          <li>49 horas de vídeo</li>
+          <li>18 projetos práticos</li>
+          <li>Certificado incluso</li>
+        </ul>
+        <div>
+          <span>R$ 109,90</span>
+          <del>R$ 219,90</del>
+        </div>
+        <a href="#">Ver curso</a>
+      </div>
+
+    </div>
+
+    <div>
+      <a href="#">Ver todos os 500+ cursos →</a>
+    </div>
+  </section>
+
+  <!-- ===================== BANNER PROMOCIONAL ===================== -->
+  <section>
+    <div>
+      <h2>🔥 Oferta por tempo limitado!</h2>
+      <p>Assine o Plano Anual hoje e ganhe acesso ilimitado a todos os cursos com <strong>60% de desconto</strong>.</p>
+      <p>Use o cupom: <strong>TECHLEARN60</strong></p>
+      <a href="#precos">Quero aproveitar</a>
+    </div>
+    <div>
+      <p>A oferta expira em:</p>
+      <div>
+        <div><span>02</span><span>Dias</span></div>
+        <div><span>14</span><span>Horas</span></div>
+        <div><span>37</span><span>Min</span></div>
+        <div><span>50</span><span>Seg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTRUTORES ===================== -->
+  <section id="instrutores">
+    <h2>Conheça Nossos Instrutores</h2>
+    <p>Profissionais com experiência comprovada no mercado e paixão pelo ensino.</p>
+
+    <div>
+
+      <div>
+        <img src="https://placehold.co/120x120?text=AV" alt="Ana Vieira" />
+        <h3>Ana Vieira</h3>
+        <p>Desenvolvedora Front-end Sênior</p>
+        <p>10 anos de experiência. Já trabalhou em empresas como Google e Nubank.</p>
+        <div>
+          <span>⭐ 4.9</span>
+          <span>12 cursos</span>
+          <span>8.400 alunos</span>
+        </div>
+        <div>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://placehold.co/120x120?text=RC" alt="Rafael Costa" />
+        <h3>Rafael Costa</h3>
+        <p>Engenheiro de Software Full Stack</p>
+        <p>Especialista em JavaScript e arquiteturas modernas. Ex-Amazon e iFood.</p>
+        <div>
+          <span>⭐ 4.8</span>
+          <span>18 cursos</span>
+          <span>22.000 alunos</span>
+        </div>
+        <div>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://placehold.co/120x120?text=JS" alt="Julia Santos" />
+        <h3>Julia Santos</h3>
+        <p>Especialista em React e Next.js</p>
+        <p>Contribuidora open source e palestrante em conferências nacionais.</p>
+        <div>
+          <span>⭐ 4.7</span>
+          <span>9 cursos</span>
+          <span>15.300 alunos</span>
+        </div>
+        <div>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://placehold.co/120x120?text=MP" alt="Marcos Pinto" />
+        <h3>Marcos Pinto</h3>
+        <p>Data Scientist & Machine Learning Engineer</p>
+        <p>Doutor em Computação pela USP. Pesquisador e consultor de IA.</p>
+        <div>
+          <span>⭐ 4.9</span>
+          <span>7 cursos</span>
+          <span>9.800 alunos</span>
+        </div>
+        <div>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+      <a href="#">Ver todos os instrutores →</a>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section>
+    <h2>Como a TechLearn Funciona</h2>
+    <p>Simples, flexível e eficiente. Veja como começar sua jornada de aprendizado.</p>
+
+    <ol>
+      <li>
+        <h3>1. Crie sua conta</h3>
+        <p>Cadastre-se gratuitamente em menos de 2 minutos. Nenhum cartão de crédito necessário para começar.</p>
+      </li>
+      <li>
+        <h3>2. Escolha seu curso</h3>
+        <p>Explore nosso catálogo e encontre o curso ideal. Use filtros por nível, duração e categoria.</p>
+      </li>
+      <li>
+        <h3>3. Aprenda no seu ritmo</h3>
+        <p>Assista às aulas quando e onde quiser. Acesso vitalício ao conteúdo adquirido.</p>
+      </li>
+      <li>
+        <h3>4. Pratique com projetos</h3>
+        <p>Cada curso inclui exercícios práticos e projetos reais para consolidar o aprendizado.</p>
+      </li>
+      <li>
+        <h3>5. Conquiste seu certificado</h3>
+        <p>Ao concluir, receba um certificado reconhecido pelo mercado para incluir no seu LinkedIn.</p>
+      </li>
+    </ol>
+
+    <img src="https://placehold.co/900x300?text=Fluxo+de+Aprendizado" alt="Fluxo de aprendizado TechLearn" />
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section id="depoimentos">
+    <h2>O que nossos alunos dizem</h2>
+    <p>Mais de 12.000 estudantes transformaram suas carreiras com a TechLearn.</p>
+
+    <div>
+
+      <div>
+        <p>"A TechLearn mudou minha vida. Em 8 meses consegui meu primeiro emprego como desenvolvedora front-end. Os projetos práticos fizeram toda a diferença na hora das entrevistas!"</p>
+        <div>
+          <img src="https://placehold.co/50x50?text=FM" alt="Fernanda Melo" />
+          <div>
+            <strong>Fernanda Melo</strong>
+            <span>Desenvolvedora Front-end na Totvs</span>
+          </div>
+        </div>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+
+      <div>
+        <p>"Conteúdo de altíssima qualidade. Os instrutores são experientes e explicam de forma clara. Já fiz 4 cursos aqui e pretendo fazer muito mais. Vale cada centavo!"</p>
+        <div>
+          <img src="https://placehold.co/50x50?text=PL" alt="Pedro Lopes" />
+          <div>
+            <strong>Pedro Lopes</strong>
+            <span>Analista de Sistemas no Itaú</span>
+          </div>
+        </div>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+
+      <div>
+        <p>"Migrei da área de administração para TI graças à TechLearn. A comunidade de alunos é incrível e sempre tem alguém disposto a ajudar. Recomendo a todos!"</p>
+        <div>
+          <img src="https://placehold.co/50x50?text=LR" alt="Larissa Ramos" />
+          <div>
+            <strong>Larissa Ramos</strong>
+            <span>UX Designer na Vivo</span>
+          </div>
+        </div>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+
+      <div>
+        <p>"Melhor investimento que já fiz na minha carreira. Aprendi Python do zero e hoje trabalho com análise de dados. O suporte da plataforma é excelente!"</p>
+        <div>
+          <img src="https://placehold.co/50x50?text=BN" alt="Bruno Nascimento" />
+          <div>
+            <strong>Bruno Nascimento</strong>
+            <span>Data Analyst na Magazine Luiza</span>
+          </div>
+        </div>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+
+    </div>
+
+    <!-- Vídeo depoimento -->
+    <div>
+      <h3>Assista ao depoimento em vídeo</h3>
+      <video controls width="600">
+        <source src="#" type="video/mp4" />
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+  </section>
+
+  <!-- ===================== PLANOS E PREÇOS ===================== -->
+  <section id="precos">
+    <h2>Planos e Preços</h2>
+    <p>Escolha o plano ideal para o seu objetivo. Cancele quando quiser.</p>
+
+    <!-- Toggle Mensal/Anual -->
+    <div>
+      <label>
+        <input type="radio" name="periodo" value="mensal" checked /> Mensal
+      </label>
+      <label>
+        <input type="radio" name="periodo" value="anual" /> Anual (economize 40%)
+      </label>
+    </div>
+
+    <div>
+
+      <!-- Plano Gratuito -->
+      <div>
+        <h3>Gratuito</h3>
+        <p>Para quem quer experimentar</p>
+        <div>
+          <span>R$ 0</span>
+          <span>/mês</span>
+        </div>
+        <ul>
+          <li>✅ Acesso a 50 aulas gratuitas</li>
+          <li>✅ Fórum da comunidade</li>
+          <li>✅ 5 projetos práticos</li>
+          <li>❌ Certificado</li>
+          <li>❌ Suporte prioritário</li>
+          <li>❌ Downloads offline</li>
+          <li>❌ Mentoria ao vivo</li>
+        </ul>
+        <a href="#">Começar grátis</a>
+      </div>
+
+      <!-- Plano Pro (destaque) -->
+      <div>
+        <span>Mais Popular</span>
+        <h3>Pro</h3>
+        <p>Para quem quer evoluir rápido</p>
+        <div>
+          <span>R$ 49,90</span>
+          <span>/mês</span>
+        </div>
+        <ul>
+          <li>✅ Acesso a todos os 500+ cursos</li>
+          <li>✅ Fórum da comunidade</li>
+          <li>✅ Todos os projetos práticos</li>
+          <li>✅ Certificados ilimitados</li>
+          <li>✅ Suporte prioritário (24h)</li>
+          <li>✅ Downloads offline</li>
+          <li>❌ Mentoria ao vivo</li>
+        </ul>
+        <a href="#">Assinar Pro</a>
+      </div>
+
+      <!-- Plano Enterprise -->
+      <div>
+        <h3>Enterprise</h3>
+        <p>Para equipes e empresas</p>
+        <div>
+          <span>R$ 299,90</span>
+          <span>/mês por equipe</span>
+        </div>
+        <ul>
+          <li>✅ Tudo do plano Pro</li>
+          <li>✅ Até 20 usuários</li>
+          <li>✅ Dashboard de progresso da equipe</li>
+          <li>✅ Conteúdo customizado</li>
+          <li>✅ Suporte dedicado</li>
+          <li>✅ Mentoria ao vivo (2x/mês)</li>
+          <li>✅ Relatórios gerenciais</li>
+        </ul>
+        <a href="#">Falar com vendas</a>
+      </div>
+
+    </div>
+
+    <!-- Garantia -->
+    <div>
+      <h3>🛡️ Garantia de 30 dias</h3>
+      <p>Se você não ficar satisfeito por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+    </div>
+
+    <!-- Tabela comparativa -->
+    <h3>Comparativo completo dos planos</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Recurso</th>
+          <th>Gratuito</th>
+          <th>Pro</th>
+          <th>Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Acesso a cursos</td>
+          <td>50 aulas</td>
+          <td>500+ cursos</td>
+          <td>500+ cursos</td>
+        </tr>
+        <tr>
+          <td>Certificados</td>
+          <td>Não</td>
+          <td>Ilimitados</td>
+          <td>Ilimitados</td>
+        </tr>
+        <tr>
+          <td>Download offline</td>
+          <td>Não</td>
+          <td>Sim</td>
+          <td>Sim</td>
+        </tr>
+        <tr>
+          <td>Suporte</td>
+          <td>Comunidade</td>
+          <td>Prioritário 24h</td>
+          <td>Dedicado</td>
+        </tr>
+        <tr>
+          <td>Mentoria ao vivo</td>
+          <td>Não</td>
+          <td>Não</td>
+          <td>2x por mês</td>
+        </tr>
+        <tr>
+          <td>Usuários</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Até 20</td>
+        </tr>
+        <tr>
+          <td>Relatórios</td>
+          <td>Não</td>
+          <td>Básico</td>
+          <td>Completo</td>
+        </tr>
+        <tr>
+          <td>Conteúdo customizado</td>
+          <td>Não</td>
+          <td>Não</td>
+          <td>Sim</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===================== BLOG / ARTIGOS ===================== -->
+  <section>
+    <h2>Blog & Novidades</h2>
+    <p>Fique por dentro das tendências de tecnologia e dicas de carreira.</p>
+
+    <div>
+
+      <article>
+        <img src="https://placehold.co/400x200?text=Blog+1" alt="Tendências Front-end" />
+        <span>Desenvolvimento Web</span>
+        <h3>As 10 Tendências de Front-end para 2025</h3>
+        <p>Descubra quais tecnologias e frameworks estão dominando o mercado e como se preparar para o futuro do desenvolvimento web.</p>
+        <div>
+          <time datetime="2025-03-15">15 de Março, 2025</time>
+          <span>8 min de leitura</span>
+        </div>
+        <a href="#">Ler artigo →</a>
+      </article>
+
+      <article>
+        <img src="https://placehold.co/400x200?text=Blog+2" alt="Carreira em TI" />
+        <span>Carreira</span>
+        <h3>Como conseguir seu primeiro emprego em TI em 2025</h3>
+        <p>Um guia completo com estratégias práticas para quem está migrando de carreira ou acabou de se formar na área de tecnologia.</p>
+        <div>
+          <time datetime="2025-03-10">10 de Março, 2025</time>
+          <span>12 min de leitura</span>
+        </div>
+        <a href="#">Ler artigo →</a>
+      </article>
+
+      <article>
+        <img src="https://placehold.co/400x200?text=Blog+3" alt="Python vs JavaScript" />
+        <span>Linguagens</span>
+        <h3>Python vs JavaScript: qual aprender primeiro?</h3>
+        <p>Comparamos as duas linguagens mais populares do mundo em termos de mercado de trabalho, curva de aprendizado e versatilidade.</p>
+        <div>
+          <time datetime="2025-03-05">5 de Março, 2025</time>
+          <span>6 min de leitura</span>
+        </div>
+        <a href="#">Ler artigo →</a>
+      </article>
+
+    </div>
+
+    <a href="#">Ver todos os artigos →</a>
+  </section>
+
+  <!-- ===================== PARCEIROS / EMPRESAS ===================== -->
+  <section>
+    <h2>Empresas que contratam nossos alunos</h2>
+    <p>Nossos certificados são reconhecidos pelas maiores empresas de tecnologia do Brasil.</p>
+
+    <div>
+      <img src="https://placehold.co/120x50?text=Google" alt="Google" />
+      <img src="https://placehold.co/120x50?text=Amazon" alt="Amazon" />
+      <img src="https://placehold.co/120x50?text=Nubank" alt="Nubank" />
+      <img src="https://placehold.co/120x50?text=iFood" alt="iFood" />
+      <img src="https://placehold.co/120x50?text=Mercado+Livre" alt="Mercado Livre" />
+      <img src="https://placehold.co/120x50?text=Stone" alt="Stone" />
+      <img src="https://placehold.co/120x50?text=Totvs" alt="Totvs" />
+      <img src="https://placehold.co/120x50?text=Vivo" alt="Vivo" />
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section>
+    <h2>Perguntas Frequentes</h2>
+
+    <details>
+      <summary>Como funciona o acesso aos cursos?</summary>
+      <p>Após se inscrever, você terá acesso imediato ao conteúdo pelo nosso site ou aplicativo mobile. O acesso ao conteúdo adquirido é vitalício.</p>
+    </details>
+
+    <details>
+      <summary>Posso assistir offline?</summary>
+      <p>Sim! Com os planos Pro e Enterprise você pode baixar as aulas pelo aplicativo mobile e assistir sem internet.</p>
+    </details>
+
+    <details>
+      <summary>Os certificados são reconhecidos pelo mercado?</summary>
+      <p>Nossos certificados são amplamente aceitos por empresas do setor de tecnologia. Você pode exportá-los diretamente para o LinkedIn.</p>
+    </details>
+
+    <details>
+      <summary>Qual é a política de cancelamento?</summary>
+      <p>Você pode cancelar sua assinatura a qualquer momento pelo painel. O acesso permanece até o fim do período pago.</p>
+    </details>
+
+    <details>
+      <summary>Existe suporte para dúvidas sobre o conteúdo?</summary>
+      <p>Sim! Cada curso tem um fórum de discussões onde você pode tirar dúvidas com o instrutor e outros alunos. Planos Pro e Enterprise têm suporte prioritário.</p>
+    </details>
+
+    <details>
+      <summary>Posso experimentar antes de pagar?</summary>
+      <p>Claro! Temos um plano gratuito com mais de 50 aulas para você conhecer a plataforma antes de assinar.</p>
+    </details>
+
+    <details>
+      <summary>Os cursos são atualizados com frequência?</summary>
+      <p>Sim. Todos os cursos são revisados e atualizados regularmente para acompanhar as mudanças do mercado tecnológico.</p>
+    </details>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section>
+    <h2>Fique por dentro das novidades!</h2>
+    <p>Cadastre-se e receba conteúdos exclusivos, descontos e lançamentos de cursos diretamente no seu e-mail.</p>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu melhor e-mail" required />
+      <select>
+        <option value="">Área de interesse</option>
+        <option value="dev">Desenvolvimento</option>
+        <option value="design">Design</option>
+        <option value="dados">Dados</option>
+        <option value="carreira">Carreira em TI</option>
+      </select>
+      <label>
+        <input type="checkbox" required />
+        Concordo em receber e-mails da TechLearn
+      </label>
+      <button type="submit">Quero receber novidades</button>
+    </form>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <p>Tem alguma dúvida ou sugestão? Nossa equipe está pronta para te ajudar.</p>
+
+    <div>
+
+      <!-- Formulário de contato -->
+      <div>
+        <form>
+          <div>
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+          </div>
+
+          <div>
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+
+          <div>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" />
+          </div>
+
+          <div>
+            <label for="assunto">Assunto *</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">Selecione um assunto</option>
+              <option value="duvida">Dúvida sobre cursos</option>
+              <option value="financeiro">Questão financeira</option>
+              <option value="tecnico">Suporte técnico</option>
+              <option value="parceria">Parceria / Negócios</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua dúvida ou mensagem..." required></textarea>
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" name="lgpd" required />
+              Concordo com a <a href="#">Política de Privacidade</a>
+            </label>
+          </div>
+
+          <button type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+
+      <!-- Informações de contato -->
+      <div>
+        <h3>Outras formas de contato</h3>
+
+        <address>
+          <p>📍 Av. Paulista, 1234 — Sala 56<br />São Paulo, SP — CEP 01310-100</p>
+          <p>📞 <a href="tel:+551133334444">(11) 3333-4444</a></p>
+          <p>📧 <a href="mailto:contato@techlearn.com.br">contato@techlearn.com.br</a></p>
+          <p>⏰ Segunda a Sexta, das 9h às 18h</p>
+        </address>
+
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+
+        <h3>Localização</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975669!2d-46.6549!3d-23.5617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQyLjEiUyA0NsKwMzknMTcuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+          width="100%"
+          height="250"
+          allowfullscreen=""
+          loading="lazy"
+          title="Localização TechLearn"
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+
+    <!-- Links do footer -->
+    <div>
+
+      <div>
+        <h4>TechLearn</h4>
+        <p>Transformando carreiras através da educação em tecnologia desde 2019.</p>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Plataforma</h4>
+        <ul>
+          <li><a href="#">Cursos</a></li>
+          <li><a href="#">Instrutores</a></li>
+          <li><a href="#">Planos e Preços</a></li>
+          <li><a href="#">Certificados</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Comunidade</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Reportar problema</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+          <li><a href="#">Seja um instrutor</a></li>
+          <li><a href="#">Imprensa</a></li>
+          <li><a href="#">Investidores</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Política de Cookies</a></li>
+          <li><a href="#">LGPD</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr />
+
+    <!-- Rodapé inferior -->
+    <div>
+      <p>© 2025 TechLearn — Todos os direitos reservados.</p>
+      <div>
+        <span>Formas de pagamento:</span>
+        <img src="https://placehold.co/50x30?text=Visa" alt="Visa" />
+        <img src="https://placehold.co/50x30?text=Master" alt="Mastercard" />
+        <img src="https://placehold.co/50x30?text=Pix" alt="Pix" />
+        <img src="https://placehold.co/50x30?text=Boleto" alt="Boleto" />
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>
