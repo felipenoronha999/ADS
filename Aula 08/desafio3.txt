@@ -1,0 +1,6 @@
+Buscador de CEP pelo nome da Rua
+
+Crie uma ferramenta onde o usuário digita o nome da rua e aparecem as opções de cep naquela rua.
+
+Já deve estar selecionado o município de Sorriso,
+será uma busca local, assim como tem no site da prefeitura de Sorriso https://site.sorriso.mt.gov.br/consultacep

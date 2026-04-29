@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Clima</title>
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .resultado {
+      margin-top: 20px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Consultar Clima</h2>
+
+  <input type="text" id="cidade" placeholder="Digite a cidade">
+  <button onclick="buscarClima()">Buscar</button>
+
+  <div id="resultado" class="resultado"></div>
+
+  <script>
+    // obter chave da api em: https://home.openweathermap.org/api_keys
+    const API_KEY = "98aecf91017be2fc1f8df56368f638d9";
+
+    async function buscarClima() {
+      const cidade = document.getElementById("cidade").value;
+      const resultado = document.getElementById("resultado");
+
+      try {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&units=metric&lang=pt_br`;
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.cod !== 200) {
+          resultado.innerHTML = "Cidade não encontrada.";
+          return;
+        }
+
+        resultado.innerHTML = `
+          <strong>Cidade:</strong> ${data.name}<br>
+          <strong>Temperatura:</strong> ${data.main.temp} °C<br>
+          <strong>Clima:</strong> ${data.weather[0].description}
+        `;
+      } catch (erro) {
+        resultado.innerHTML = "Erro ao buscar clima.";
+      }
+    }
+  </script>
+
+</body>
+</html>

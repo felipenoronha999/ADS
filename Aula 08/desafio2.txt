@@ -1,0 +1,9 @@
+Calculadora de Frete
+Simule um e-commerce de camisetas. 
+O usuário insere o total de camisetas e o CEP.
+O programa calcula o valor do frete com base na Região (UF).
+
+Crie uma tabela de preços:
+Sul/Sudeste = R$ 5,00 por camiseta;
+Centro-Oeste = R$ por camiseta;
+Norte/Nordeste = R$ 10,00 por camiseta;

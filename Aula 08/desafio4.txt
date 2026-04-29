@@ -1,0 +1,3 @@
+Fazer um programa que monitora o clima.
+A cada 5 minutos deverá ser verificado o tempo na cidade escolhida.
+Deverá ser criado alertas como frio extremo, calor extremo e chuva que podem ser gatilhos para executar automações como ligar central de ar, ligar aquecedor, fechar cortinas e recolher roupas do varal.

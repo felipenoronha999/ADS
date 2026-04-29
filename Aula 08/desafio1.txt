@@ -1,0 +1,3 @@
+Preenchimento Automático de Cadastro
+Crie um formulário de cadastro onde, ao digitar os 8 dígitos do CEP, os campos de Rua, Bairro, Cidade e Estado sejam preenchidos instantaneamente.
+Ao submeter o formulário, deverá aparecer um modal com todos os dados que foram preenchidos.
